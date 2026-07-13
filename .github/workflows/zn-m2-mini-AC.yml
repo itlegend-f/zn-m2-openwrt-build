@@ -20,13 +20,13 @@ permissions:
   actions: write
 
 env:
-  REPO_URL: https://github.com/xdm2211/sdf8057-ipq6000.git
+  REPO_URL: https://github.com/openwrt-fork/sdf8057-ipq6000.git
   REPO_BRANCH: master
   FEEDS_CONF: ./scripts/zn-m2/feeds.conf.default
   CONFIG_FILE: ./config/zn-m2-mini-AC.config
   DIY_P1_SH: ./scripts/zn-m2/diy-part1.sh
   DIY_P2_SH: ./scripts/zn-m2/diy-part2.sh
-  DIY_P4_SH: ./scripts/zn-m2/diy-part4.sh
+  DIY_P3_SH: ./scripts/zn-m2/diy-part3.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -62,7 +62,7 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         curl -s https://raw.githubusercontent.com/immortalwrt/build-scripts/master/init_build_environment.sh | sudo bash
-        sudo apt-get install -y rename pigz libfuse-dev upx subversion clang
+        sudo apt-get install -y rename pigz libfuse-dev upx subversion clang lua5.1 liblua5.1-0-dev
         sudo apt-get autoremove -y --purge
         sudo apt-get clean
         sudo rm -rf po2lmo
@@ -106,9 +106,9 @@ jobs:
         set -x
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P4_SH
+        chmod +x $DIY_P3_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P4_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
 
     - name: Download package
       id: package
@@ -186,8 +186,3 @@ jobs:
         delete_workflows: true
         workflows_keep_day: 3
         gh_token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Delete Tags without Release
-      uses: Huanyueyichen/delete-tags-without-release-action@v0.2.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
