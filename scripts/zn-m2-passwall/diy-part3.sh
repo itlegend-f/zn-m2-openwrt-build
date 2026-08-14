@@ -24,3 +24,6 @@ sed -i -r 's#/bin/login#/bin/login -f root#g' feeds/packages/utils/ttyd/files/tt
 
 # design修改proxy链接
 sed -i -r "s#navbar_proxy = 'openclash'#navbar_proxy = 'passwall'#g" feeds/luci/themes/luci-theme-design/luasrc/view/themes/design/header.htm
+
+# 修改主机名
+#sed -i 's/OpenWrt/ZN-M2/g' package/base-files/files/bin/config_generate
