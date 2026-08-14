@@ -18,14 +18,15 @@
 
 # 移除 OpenWrt Feeds 过时的LuCI版本
 #rm -rf feeds/luci/applications/luci-app-passwall
-#rm -rf feeds/luci/applications/luci-app-openclash
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall feeds/luci/applications/luci-app-passwall
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 feeds/luci/applications/luci-app-passwall2
+#替换openclash
+#rm -rf feeds/luci/applications/luci-app-openclash
 #git clone --depth=1 https://github.com/vernesong/OpenClash feeds/luci/applications/luci-app-openclash
 
 #优先安装 passwall 源
-./scripts/feeds install -a -f -p passwall_packages
-./scripts/feeds install -a -f -p passwall_luci
+#./scripts/feeds install -a -f -p passwall_packages
+#./scripts/feeds install -a -f -p passwall_luci
 
 # 清理 PassWall 的 chnlist 规则文件
 # echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/passwall/rules/chnlist
