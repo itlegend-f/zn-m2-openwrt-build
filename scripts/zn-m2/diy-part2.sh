@@ -9,10 +9,6 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-#优先安装 passwall 源
-./scripts/feeds install -a -f -p passwall_packages
-./scripts/feeds install -a -f -p passwall_luci
-
 #增加集客AC
 #git clone --depth=1 https://github.com/openwrt-fork/openwrt-gecoosac.git feeds/luci/applications/luci-app-gecoosac
 
@@ -26,6 +22,10 @@
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall feeds/luci/applications/luci-app-passwall
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 feeds/luci/applications/luci-app-passwall2
 #git clone --depth=1 https://github.com/vernesong/OpenClash feeds/luci/applications/luci-app-openclash
+
+#优先安装 passwall 源
+./scripts/feeds install -a -f -p passwall_packages
+./scripts/feeds install -a -f -p passwall_luci
 
 # 清理 PassWall 的 chnlist 规则文件
 # echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/passwall/rules/chnlist
