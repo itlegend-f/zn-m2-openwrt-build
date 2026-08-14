@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: ZN-M2 4.4.60 WITH OPENCLASH build
+name: ZN-M2 OPENCLASH build
 
 on:
   repository_dispatch:
