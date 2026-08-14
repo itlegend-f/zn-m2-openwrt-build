@@ -13,7 +13,7 @@
 name: zn-m2 with openclash build
 
 on:
-  repository_dispatch:
+#  repository_dispatch:
   workflow_dispatch:
 permissions:
   contents: write
