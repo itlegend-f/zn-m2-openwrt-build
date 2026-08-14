@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: zn-m2 mini build
+name: ZN-M2 精简版
 
 on:
   repository_dispatch:
