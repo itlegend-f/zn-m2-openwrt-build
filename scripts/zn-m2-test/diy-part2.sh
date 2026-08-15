@@ -21,7 +21,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/l
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages feeds/packages/passwall-packages
 
 # 移除 OpenWrt Feeds 过时的LuCI版本
-rm -rf feeds/luci/applications/luci-app-passwall
+#rm -rf feeds/luci/applications/luci-app-passwall
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall feeds/luci/applications/luci-app-passwall
 #git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 feeds/luci/applications/luci-app-passwall2
 #替换openclash
