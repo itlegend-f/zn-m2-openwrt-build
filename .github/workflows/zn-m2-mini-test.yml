@@ -171,8 +171,8 @@ jobs:
         grep chinadns-ng ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print $2}'| awk -F"-" '{print "ChinaDNS-NG " "`"$1"`"}' >> release.txt
         echo "详细包信息请查看 manifest 文件" >> release.txt
         grep luci-app-gecoosac ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "release_name=LEDE CMIOT-AX18 精简版 + 集客AC V" $2}' >> $GITHUB_OUTPUT
-        grep luci-app-passwall ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "release_name=LEDE CMIOT-AX18 Passwall " $2}' >> $GITHUB_OUTPUT
-        grep luci-app-openclash ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "release_name=LEDE CMIOT-AX18OpenClash " $2}' >> $GITHUB_OUTPUT
+        grep luci-app-passwall ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "release_name=Passwall " $2}' >> $GITHUB_OUTPUT
+        grep luci-app-openclash ${{ env.FIRMWARE }}/openwrt-ipq60xx-generic-device-zn-m2.manifest | awk -F" - " '{print "release_name=OpenClash " $2}' >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
