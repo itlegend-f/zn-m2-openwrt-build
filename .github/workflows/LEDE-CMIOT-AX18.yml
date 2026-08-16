@@ -22,11 +22,11 @@ permissions:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede.git
   REPO_BRANCH: master
-  FEEDS_CONF: ./scripts/zn-m2-lede/feeds.conf.default
-  CONFIG_FILE: ./config/zn-m2-mini-lede.config
-  DIY_P1_SH: ./scripts/zn-m2-lede/diy-part1.sh
-  DIY_P2_SH: ./scripts/zn-m2-lede/diy-part2.sh
-  DIY_P3_SH: ./scripts/zn-m2-lede/diy-part3.sh
+  FEEDS_CONF: ./scripts/LEDE-CMIOT-AX18/feeds.conf.default
+  CONFIG_FILE: ./config/LEDE-CMIOT-AX18.config
+  DIY_P1_SH: ./scripts/LEDE-CMIOT-AX18/diy-part1.sh
+  DIY_P2_SH: ./scripts/LEDE-CMIOT-AX18/diy-part2.sh
+  DIY_P3_SH: ./scripts/LEDE-CMIOT-AX18/diy-part3.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
